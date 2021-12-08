@@ -11,7 +11,7 @@ public final class ConversationItem {
     public var announcement: String = ""
     public var lastReadMessageId: String?
     public var unseenMessageCount: Int = 0
-    public var unseenMentionCount: Int = 0
+    public var hasUnseenMention: Bool = false
     public var status: Int = ConversationStatus.START.rawValue
     public var muteUntil: String?
     public var codeUrl: String?
@@ -103,7 +103,7 @@ public final class ConversationItem {
         self.announcement = (try? container.decodeIfPresent(String.self, forKey: .announcement)) ?? ""
         self.lastReadMessageId = try container.decodeIfPresent(String.self, forKey: .lastReadMessageId)
         self.unseenMessageCount = (try? container.decodeIfPresent(Int.self, forKey: .unseenMessageCount)) ?? 0
-        self.unseenMentionCount = (try? container.decodeIfPresent(Int.self, forKey: .unseenMentionCount)) ?? 0
+        self.hasUnseenMention = (try? container.decodeIfPresent(Bool.self, forKey: .hasUnseenMention)) ?? false
         self.status = (try? container.decodeIfPresent(Int.self, forKey: .status)) ?? ConversationStatus.START.rawValue
         self.muteUntil = try container.decodeIfPresent(String.self, forKey: .muteUntil)
         self.codeUrl = try container.decodeIfPresent(String.self, forKey: .codeUrl)
@@ -132,7 +132,7 @@ public final class ConversationItem {
         self.mentionsJson = try container.decodeIfPresent(Data.self, forKey: .mentionsJson)
     }
     
-    internal init(conversationId: String = "", ownerId: String = "", category: String? = nil, name: String = "", iconUrl: String = "", announcement: String = "", lastReadMessageId: String? = nil, unseenMessageCount: Int = 0, unseenMentionCount: Int = 0, status: Int = ConversationStatus.START.rawValue, muteUntil: String? = nil, codeUrl: String? = nil, pinTime: String? = nil, createdAt: String = "", ownerIdentityNumber: String = "", ownerFullName: String = "", ownerAvatarUrl: String = "", ownerIsVerified: Bool = false, messageStatus: String = "", messageId: String = "", content: String = "", contentType: String = "", senderId: String = "", senderFullName: String = "", participantFullName: String? = nil, participantUserId: String? = nil, appId: String? = nil, actionName: String? = nil, mentionsJson: Data? = nil) {
+    internal init(conversationId: String = "", ownerId: String = "", category: String? = nil, name: String = "", iconUrl: String = "", announcement: String = "", lastReadMessageId: String? = nil, unseenMessageCount: Int = 0, hasUnseenMention: Bool = false, status: Int = ConversationStatus.START.rawValue, muteUntil: String? = nil, codeUrl: String? = nil, pinTime: String? = nil, createdAt: String = "", ownerIdentityNumber: String = "", ownerFullName: String = "", ownerAvatarUrl: String = "", ownerIsVerified: Bool = false, messageStatus: String = "", messageId: String = "", content: String = "", contentType: String = "", senderId: String = "", senderFullName: String = "", participantFullName: String? = nil, participantUserId: String? = nil, appId: String? = nil, actionName: String? = nil, mentionsJson: Data? = nil) {
         self.conversationId = conversationId
         self.ownerId = ownerId
         self.category = category
@@ -141,7 +141,7 @@ public final class ConversationItem {
         self.announcement = announcement
         self.lastReadMessageId = lastReadMessageId
         self.unseenMessageCount = unseenMessageCount
-        self.unseenMentionCount = unseenMentionCount
+        self.hasUnseenMention = hasUnseenMention
         self.status = status
         self.muteUntil = muteUntil
         self.codeUrl = codeUrl
@@ -193,7 +193,7 @@ extension ConversationItem: Decodable, MixinFetchableRecord {
         case status
         case lastReadMessageId
         case unseenMessageCount
-        case unseenMentionCount
+        case hasUnseenMention
         case muteUntil
         case codeUrl
         case pinTime

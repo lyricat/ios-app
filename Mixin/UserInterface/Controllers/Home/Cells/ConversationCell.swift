@@ -167,7 +167,7 @@ class ConversationCell: ModernSelectedBackgroundCell {
         }
         
         let hasUnreadMessage = item.unseenMessageCount > 0
-        let hasUnreadMention = item.unseenMentionCount > 0
+        let hasUnreadMention = item.hasUnseenMention
         if hasUnreadMessage || hasUnreadMessage {
             pinImageView.isHidden = true
             muteImageView.isHidden = true
