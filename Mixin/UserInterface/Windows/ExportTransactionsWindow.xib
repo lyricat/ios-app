@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ExportTransactionsWindow" customModule="Mixin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eR-Od-2gp" customClass="TopRoundedView" customModule="Mixin" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="486" width="414" height="410"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhu-F6-1Hx">
+                            <rect key="frame" x="348" y="0.0" width="66" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="66" id="NBf-AK-fUu"/>
+                                <constraint firstAttribute="height" constant="70" id="e2T-T0-3Sz"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_dialog_close"/>
+                            <connections>
+                                <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="JNA-pr-sc3"/>
+                            </connections>
+                        </button>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPK-Kj-M9f">
+                            <rect key="frame" x="20" y="90" width="374" height="128"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMk-qk-d3C">
+                                    <rect key="frame" x="20" y="24" width="74" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Start Date">
+                                        <color key="titleColor" name="text_desc"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular16"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="local_title" value="transaction_export_start_date"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectStartDateAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Lbb-ee-VlJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h6-7O-iOJ">
+                                    <rect key="frame" x="20" y="72" width="81" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="2022-2-28">
+                                        <color key="titleColor" name="title"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular16"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectEndDateAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="6gW-iX-MQC"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="5io-M2-sVj">
+                                    <rect key="frame" x="327" y="25" width="30" height="30"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-S4-lEW">
+                                    <rect key="frame" x="327" y="73" width="30" height="30"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" name="button_background_secondary"/>
+                            <constraints>
+                                <constraint firstItem="h5L-S4-lEW" firstAttribute="centerY" secondItem="1h6-7O-iOJ" secondAttribute="centerY" id="8DS-eA-2E1"/>
+                                <constraint firstItem="rMk-qk-d3C" firstAttribute="leading" secondItem="YPK-Kj-M9f" secondAttribute="leading" constant="20" id="Mes-oC-62h"/>
+                                <constraint firstAttribute="height" constant="128" id="R5R-Be-VWl"/>
+                                <constraint firstAttribute="trailing" secondItem="5io-M2-sVj" secondAttribute="trailing" constant="17" id="TMM-U3-Sbo"/>
+                                <constraint firstItem="5io-M2-sVj" firstAttribute="centerY" secondItem="rMk-qk-d3C" secondAttribute="centerY" id="af8-C9-iFX"/>
+                                <constraint firstAttribute="bottom" secondItem="1h6-7O-iOJ" secondAttribute="bottom" constant="24" id="dpf-tX-vI1"/>
+                                <constraint firstAttribute="trailing" secondItem="h5L-S4-lEW" secondAttribute="trailing" constant="17" id="jub-fj-dRI"/>
+                                <constraint firstItem="rMk-qk-d3C" firstAttribute="top" secondItem="YPK-Kj-M9f" secondAttribute="top" constant="24" id="xp0-JP-7JU"/>
+                                <constraint firstItem="1h6-7O-iOJ" firstAttribute="leading" secondItem="YPK-Kj-M9f" secondAttribute="leading" constant="20" id="ygF-Ah-U49"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="13"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI4-ep-A1O" customClass="RoundedButton" customModule="Mixin" customModuleProvider="target">
+                            <rect key="frame" x="150" y="310" width="114" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="contentEdgeInsets" minX="33" minY="12" maxX="33" maxY="12"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Export"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular16"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="local_title" value="web_export_as_pdf"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="exportAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ELL-bA-z0R"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjd-K0-pca">
+                            <rect key="frame" x="20" y="24.5" width="134" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" name="title"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="semibold18"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="local_title" value="wallet_all_transactions_title"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstItem="Wjd-K0-pca" firstAttribute="leading" secondItem="8eR-Od-2gp" secondAttribute="leading" constant="20" id="QhV-BK-95E"/>
+                        <constraint firstItem="eI4-ep-A1O" firstAttribute="top" secondItem="YPK-Kj-M9f" secondAttribute="bottom" constant="92" id="QsW-NY-tcW"/>
+                        <constraint firstItem="YPK-Kj-M9f" firstAttribute="leading" secondItem="8eR-Od-2gp" secondAttribute="leading" constant="20" id="XvR-M8-Gat"/>
+                        <constraint firstAttribute="trailing" secondItem="YPK-Kj-M9f" secondAttribute="trailing" constant="20" id="YHn-KY-8Re">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="13"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                        <constraint firstItem="vhu-F6-1Hx" firstAttribute="top" secondItem="8eR-Od-2gp" secondAttribute="top" id="n4V-Lt-M3T"/>
+                        <constraint firstItem="YPK-Kj-M9f" firstAttribute="top" secondItem="8eR-Od-2gp" secondAttribute="top" constant="90" id="nvK-3o-Kfs"/>
+                        <constraint firstItem="eI4-ep-A1O" firstAttribute="centerX" secondItem="8eR-Od-2gp" secondAttribute="centerX" id="pYS-5z-zFc"/>
+                        <constraint firstAttribute="trailing" secondItem="vhu-F6-1Hx" secondAttribute="trailing" id="pzr-8B-v5O"/>
+                        <constraint firstItem="Wjd-K0-pca" firstAttribute="centerY" secondItem="vhu-F6-1Hx" secondAttribute="centerY" id="xXl-Vg-jVr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8eR-Od-2gp" secondAttribute="trailing" id="W4q-Pm-gWc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eI4-ep-A1O" secondAttribute="bottom" constant="22" id="bg3-EM-zSK"/>
+                <constraint firstItem="8eR-Od-2gp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nyp-XH-NOE"/>
+                <constraint firstItem="8eR-Od-2gp" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="tC5-6f-6ey"/>
+            </constraints>
+            <connections>
+                <outlet property="endDateButton" destination="1h6-7O-iOJ" id="E2W-em-WPc"/>
+                <outlet property="exportButton" destination="eI4-ep-A1O" id="FKY-ag-ecE"/>
+                <outlet property="popupView" destination="8eR-Od-2gp" id="pAa-gV-Ujt"/>
+                <outlet property="startDateButton" destination="rMk-qk-d3C" id="adN-70-dn5"/>
+            </connections>
+            <point key="canvasLocation" x="-94.20289855072464" y="14.732142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_calendar" width="30" height="30"/>
+        <image name="ic_dialog_close" width="26" height="26"/>
+        <namedColor name="background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="button_background_secondary">
+            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="text_desc">
+            <color red="0.73725490196078436" green="0.74509803921568629" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="title">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

@@ -539,6 +539,7 @@
 "wallet_menu_show_hidden_assets" = "Hidden assets";
 "wallet_menu_show_asset" = "Show asset";
 "wallet_menu_hide_asset" = "Hide asset";
+"wallet_menu_export_transactions" = "Export Transactions";
 "wallet_hide_asset_empty" = "No hidden assets";
 "wallet_send_amount" = "Amount";
 "wallet_button_add_address" = "Tap to add address";
@@ -621,6 +622,8 @@
 "transaction_type_fee" = "Fee";
 "transaction_type_rebate" = "Rebate";
 "transaction_type_raw" = "Raw";
+"transaction_export_start_date" = "Start Date";
+"transaction_export_end_date" = "End Date";
 
 // Address Book
 "address_book_title" = "%@ Address Book";

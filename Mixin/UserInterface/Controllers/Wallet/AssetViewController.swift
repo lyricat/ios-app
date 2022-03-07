@@ -127,6 +127,9 @@ extension AssetViewController: ContainerViewControllerDelegate {
             }
             weakSelf.navigationController?.popViewController(animated: true)
         }))
+        alc.addAction(UIAlertAction(title: R.string.localizable.wallet_menu_export_transactions(), style: .default, handler: { _ in
+            ExportTransactionsWindow.instance().presentPopupControllerAnimated()
+        }))
         alc.addAction(UIAlertAction(title: Localized.DIALOG_BUTTON_CANCEL, style: .cancel, handler: nil))
         self.present(alc, animated: true, completion: nil)
     }

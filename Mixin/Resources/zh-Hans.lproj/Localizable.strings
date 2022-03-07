@@ -540,6 +540,7 @@
 "wallet_menu_show_hidden_assets" = "隐藏资产";
 "wallet_menu_show_asset" = "显示资产";
 "wallet_menu_hide_asset" = "隐藏资产";
+"wallet_menu_export_transactions" = "导出交易记录";
 "wallet_hide_asset_empty" = "没有需要隐藏的资产";
 "wallet_send_amount" = "数量";
 "wallet_button_add_address" = "点击添加地址";
@@ -600,6 +601,8 @@
 "wallet_store_encrypted_pin_tip" = "启用%@支付？";
 "wallet_touch_id" = "指纹";
 "wallet_face_id" = "面容";
+"wallet_header_recent_searches" = "搜索历史";
+"wallet_header_trending" = "热门资产";
 
 // Transaction
 "transaction_title" = "交易详情";
@@ -620,8 +623,8 @@
 "transaction_type_fee" = "手续费";
 "transaction_type_rebate" = "退款";
 "transaction_type_raw" = "其他";
-"wallet_header_recent_searches" = "搜索历史";
-"wallet_header_trending" = "热门资产";
+"transaction_export_start_date" = "开始日期";
+"transaction_export_end_date" = "结束日期";
 
 // Address Book
 "address_book_title" = "%@ 地址簿";
