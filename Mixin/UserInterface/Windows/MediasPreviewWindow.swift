@@ -13,7 +13,7 @@ final class MediasPreviewWindow: BottomSheetView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sendPhotoButton: RoundedButton!
     @IBOutlet weak var sendFileButton: UIButton!
-    @IBOutlet weak var flowLayout: SnappingFlowLayout!
+    @IBOutlet weak var flowLayout: SnapCenterFlowLayout!
     
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     

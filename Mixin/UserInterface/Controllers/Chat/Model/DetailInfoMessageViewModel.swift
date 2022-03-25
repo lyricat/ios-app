@@ -63,7 +63,6 @@ class DetailInfoMessageViewModel: MessageViewModel {
     private let minFullnameWidth: CGFloat = 16
     private let minDetailInfoLeftMargin: CGFloat = 8
     private let statusHighlightTintColor = UIColor.theme
-    private let stackedPhotoMargin: CGFloat = 40
     
     override func layout(width: CGFloat, style: MessageViewModel.Style) {
         super.layout(width: width, style: style)
@@ -88,7 +87,7 @@ class DetailInfoMessageViewModel: MessageViewModel {
             timeFrame.origin = CGPoint(x: backgroundImageFrame.maxX - timeFrame.width,
                                        y: backgroundImageFrame.maxY)
         }
-        if showStatusImage && !isStackedPhoto {
+        if showStatusImage {
             statusFrame.size = ImageSet.MessageStatus.size
         } else {
             statusFrame.size = .zero
@@ -104,9 +103,6 @@ class DetailInfoMessageViewModel: MessageViewModel {
                 + DetailInfoMessageViewModel.statusLeftMargin
                 + statusFrame.width
             timeFrame.origin.x -= offset
-        }
-        if isStackedPhoto {
-            timeFrame.origin.x -= stackedPhotoMargin
         }
         if style.contains(.fullname) {
             let index = message.userId.positiveHashCode() % UIColor.usernameColors.count

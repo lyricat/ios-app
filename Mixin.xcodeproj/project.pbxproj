@@ -545,30 +545,19 @@
 		7BFE47E32284394000FC4379 /* CheckmarkPeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFE47E12284394000FC4379 /* CheckmarkPeerCell.xib */; };
 		7BFE47E52284530200FC4379 /* PeerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE47E42284530200FC4379 /* PeerHeaderView.swift */; };
 		7BFE47E722845DE100FC4379 /* MessageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE47E622845DE100FC4379 /* MessageReceiver.swift */; };
-		7C09947627A0D88B00A9D888 /* StackedPhotoMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C09947527A0D88B00A9D888 /* StackedPhotoMessageViewModel.swift */; };
 		7C0D997F26CA62CD00356655 /* StaticAudioMessagePlayingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D997E26CA62CD00356655 /* StaticAudioMessagePlayingManager.swift */; };
 		7C0E15DF27005376002FC718 /* UnknownURLWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E15DE27005376002FC718 /* UnknownURLWindow.swift */; };
 		7C0E15E1270053AC002FC718 /* UnknownURLWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C0E15E0270053AC002FC718 /* UnknownURLWindow.xib */; };
 		7C104A8127D83A51004D0530 /* RefreshExternalSchemeJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C104A8027D83A51004D0530 /* RefreshExternalSchemeJob.swift */; };
-		7C0E16A52702A9EF002FC718 /* CollectibleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E16A42702A9EF002FC718 /* CollectibleResponse.swift */; };
-		7C0E16A72702AF22002FC718 /* CollectibleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E16A62702AF22002FC718 /* CollectibleAPI.swift */; };
-		7C0E16A92702FB85002FC718 /* CollectibleToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E16A82702FB85002FC718 /* CollectibleToken.swift */; };
-		7C0E1D0D2786EAC900762FBE /* SnappingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E1D0C2786EAC900762FBE /* SnappingFlowLayout.swift */; };
-		7C13BF76279EA4E90027FF25 /* StackedPhotoMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C13BF75279EA4E90027FF25 /* StackedPhotoMessageCell.swift */; };
-		7C148ED227A3E7FA00599E76 /* StackedPhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C148ED127A3E7FA00599E76 /* StackedPhotoPreviewViewController.swift */; };
 		7C14CFC126CA35CF0094AF4A /* StaticMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CFBF26CA35CF0094AF4A /* StaticMessagesViewController.swift */; };
 		7C14CFC226CA35CF0094AF4A /* StaticMessagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C14CFC026CA35CF0094AF4A /* StaticMessagesView.xib */; };
-		7C1686BB27BDF1D5004393DD /* StickersStoreBannerFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1686BA27BDF1D5004393DD /* StickersStoreBannerFlowLayout.swift */; };
 		7C1A6C4326C6580600A1D6CE /* StickerPreviewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1A6C4226C6580600A1D6CE /* StickerPreviewItemCell.swift */; };
 		7C1EDAB42772FF8B00193917 /* VerifyNumberContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EDAB32772FF8B00193917 /* VerifyNumberContext.swift */; };
 		7C225E8827C4C5FE00154143 /* GroupInCommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C225E8627C4C5FE00154143 /* GroupInCommonCell.swift */; };
 		7C225E8927C4C5FE00154143 /* GroupInCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C225E8727C4C5FE00154143 /* GroupInCommonCell.xib */; };
 		7C2475C727795BC100112A30 /* DeleteAccountTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2475C627795BC100112A30 /* DeleteAccountTableHeaderView.swift */; };
-		7C2ACDAE27D73F7C00E9DDB3 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2ACDAD27D73F7C00E9DDB3 /* LeftAlignedCollectionViewFlowLayout.swift */; };
-		7C247AA5277AED6800112A30 /* StackedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C247AA4277AED6800112A30 /* StackedPhotoView.swift */; };
-		7C247AA7277AEDD100112A30 /* StackedPhotoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C247AA6277AEDD100112A30 /* StackedPhotoLayout.swift */; };
-		7C247AA9277AF2DA00112A30 /* StackedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C247AA8277AF2DA00112A30 /* StackedPhotoCell.swift */; };
 		7C247C67277C0DC100112A30 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C247C66277C0DC100112A30 /* BadgeView.swift */; };
+		7C2ACDAE27D73F7C00E9DDB3 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2ACDAD27D73F7C00E9DDB3 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		7C359DCE26A6C15A001D3AE4 /* StickerStorePreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C359DCD26A6C15A001D3AE4 /* StickerStorePreviewCell.swift */; };
 		7C359DD026A6C173001D3AE4 /* StickerStoreBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C359DCF26A6C173001D3AE4 /* StickerStoreBannerView.swift */; };
 		7C36BE88274F248C00089B6D /* StickerStoreBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36BE87274F248C00089B6D /* StickerStoreBannerCell.swift */; };
@@ -1536,30 +1525,20 @@
 		7BFE47E12284394000FC4379 /* CheckmarkPeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckmarkPeerCell.xib; sourceTree = "<group>"; };
 		7BFE47E42284530200FC4379 /* PeerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerHeaderView.swift; sourceTree = "<group>"; };
 		7BFE47E622845DE100FC4379 /* MessageReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReceiver.swift; sourceTree = "<group>"; };
-		7C09947527A0D88B00A9D888 /* StackedPhotoMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedPhotoMessageViewModel.swift; sourceTree = "<group>"; };
 		7C0D997E26CA62CD00356655 /* StaticAudioMessagePlayingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticAudioMessagePlayingManager.swift; sourceTree = "<group>"; };
 		7C0E15DE27005376002FC718 /* UnknownURLWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownURLWindow.swift; sourceTree = "<group>"; };
 		7C0E15E0270053AC002FC718 /* UnknownURLWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnknownURLWindow.xib; sourceTree = "<group>"; };
 		7C104A8027D83A51004D0530 /* RefreshExternalSchemeJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshExternalSchemeJob.swift; sourceTree = "<group>"; };
-		7C0E16A42702A9EF002FC718 /* CollectibleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleResponse.swift; sourceTree = "<group>"; };
-		7C0E16A62702AF22002FC718 /* CollectibleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleAPI.swift; sourceTree = "<group>"; };
-		7C0E16A82702FB85002FC718 /* CollectibleToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleToken.swift; sourceTree = "<group>"; };
-		7C0E1D0C2786EAC900762FBE /* SnappingFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingFlowLayout.swift; sourceTree = "<group>"; };
-		7C13BF75279EA4E90027FF25 /* StackedPhotoMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedPhotoMessageCell.swift; sourceTree = "<group>"; };
-		7C148ED127A3E7FA00599E76 /* StackedPhotoPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedPhotoPreviewViewController.swift; sourceTree = "<group>"; };
 		7C14CFBF26CA35CF0094AF4A /* StaticMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMessagesViewController.swift; sourceTree = "<group>"; };
 		7C14CFC026CA35CF0094AF4A /* StaticMessagesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaticMessagesView.xib; sourceTree = "<group>"; };
-		7C1686BA27BDF1D5004393DD /* StickersStoreBannerFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickersStoreBannerFlowLayout.swift; sourceTree = "<group>"; };
 		7C1A6C4226C6580600A1D6CE /* StickerPreviewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPreviewItemCell.swift; sourceTree = "<group>"; };
 		7C1EDAB32772FF8B00193917 /* VerifyNumberContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNumberContext.swift; sourceTree = "<group>"; };
 		7C225E8627C4C5FE00154143 /* GroupInCommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInCommonCell.swift; sourceTree = "<group>"; };
 		7C225E8727C4C5FE00154143 /* GroupInCommonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupInCommonCell.xib; sourceTree = "<group>"; };
 		7C2475C627795BC100112A30 /* DeleteAccountTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountTableHeaderView.swift; sourceTree = "<group>"; };
-		7C2ACDAD27D73F7C00E9DDB3 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		7C247AA4277AED6800112A30 /* StackedPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedPhotoView.swift; sourceTree = "<group>"; };
 		7C247AA6277AEDD100112A30 /* StackedPhotoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedPhotoLayout.swift; sourceTree = "<group>"; };
-		7C247AA8277AF2DA00112A30 /* StackedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedPhotoCell.swift; sourceTree = "<group>"; };
 		7C247C66277C0DC100112A30 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		7C2ACDAD27D73F7C00E9DDB3 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		7C359DCD26A6C15A001D3AE4 /* StickerStorePreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerStorePreviewCell.swift; sourceTree = "<group>"; };
 		7C359DCF26A6C173001D3AE4 /* StickerStoreBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerStoreBannerView.swift; sourceTree = "<group>"; };
 		7C36BE87274F248C00089B6D /* StickerStoreBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerStoreBannerCell.swift; sourceTree = "<group>"; };
@@ -2150,7 +2129,6 @@
 				7B8BB587234F160C00991ACB /* SharedMediaCategorizer.swift */,
 				7B8BB581234DDA0000991ACB /* SharedMediaDataSource.swift */,
 				7B8BB589234F28A700991ACB /* SharedMediaGroupedByDateCategorizer.swift */,
-				7C09947527A0D88B00A9D888 /* StackedPhotoMessageViewModel.swift */,
 				7B8ED47F21198EC20039946B /* StickerInputModelController.swift */,
 				7B28FA13201195E40023B28D /* StickerMessageViewModel.swift */,
 				7B8144621FDD62B900404431 /* SystemMessageViewModel.swift */,
@@ -2565,7 +2543,6 @@
 		7C0E1D0B2786E9F400762FBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C0E1D0C2786EAC900762FBE /* SnappingFlowLayout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2888,7 +2865,6 @@
 				7C14CFBF26CA35CF0094AF4A /* StaticMessagesViewController.swift */,
 				94FCB5FE264673C400CCC8FD /* TranscriptPreviewViewController.swift */,
 				7CB0955226CD18F70049F4C7 /* PinMessagesPreviewViewController.swift */,
-				7C148ED127A3E7FA00599E76 /* StackedPhotoPreviewViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -3399,8 +3375,6 @@
 				7CB0954E26CCED2E0049F4C7 /* PinMessageBannerView.swift */,
 				7C14CFC026CA35CF0094AF4A /* StaticMessagesView.xib */,
 				7C359DCF26A6C173001D3AE4 /* StickerStoreBannerView.swift */,
-				7C247AA4277AED6800112A30 /* StackedPhotoView.swift */,
-				7C247AA8277AF2DA00112A30 /* StackedPhotoCell.swift */,
 				7C247C66277C0DC100112A30 /* BadgeView.swift */,
 			);
 			path = Views;
@@ -3559,7 +3533,6 @@
 				7B91056122CF4A58002E3608 /* LiveMessageCell.swift */,
 				E081796923C32ACA005FEEAC /* PostMessageCell.swift */,
 				7BF196B42411650900CC8325 /* LocationMessageCell.swift */,
-				7C13BF75279EA4E90027FF25 /* StackedPhotoMessageCell.swift */,
 				7BD7534D2182CDCE00BAC172 /* IconPrefixedTextMessageCell.swift */,
 				949569A5263B12FE00E043FE /* TranscriptMessageCell.swift */,
 				7BEE5350222D0E5C008D3911 /* ConversationExtensionCell.swift */,
@@ -4449,7 +4422,6 @@
 				7B1C8B992513265200F7A817 /* ExternalSharingPreviewWrapperView.swift in Sources */,
 				E081796A23C32ACA005FEEAC /* PostMessageCell.swift in Sources */,
 				DFD089E21FE4041400A7D815 /* AttachmentUploadJob.swift in Sources */,
-				7C247AA9277AF2DA00112A30 /* StackedPhotoCell.swift in Sources */,
 				7B56DBD11FEFC5B900B50D82 /* PinField.swift in Sources */,
 				7B2E3E581FA0815B00DDDDEB /* LoginNavigationController.swift in Sources */,
 				941655C425CD7DA7007E76D0 /* AudioSessionClientPriority.swift in Sources */,
@@ -4524,7 +4496,6 @@
 				DF17B51520525B47006447C2 /* ArrayExtension.swift in Sources */,
 				DFD294351FA6EC0D00FADAAD /* ContactViewController.swift in Sources */,
 				7BA9F32024A22EC200D7C091 /* CallMemberCell.swift in Sources */,
-				7C13BF76279EA4E90027FF25 /* StackedPhotoMessageCell.swift in Sources */,
 				7BBAE9DA244ADB3800CC8670 /* AssetQrCodeScanningController.swift in Sources */,
 				DFA063D222B0D0E80031E151 /* PrivacySettingViewController.swift in Sources */,
 				7BEFDC191FB05B3E00F66885 /* NewGroupViewController.swift in Sources */,
@@ -4706,7 +4677,6 @@
 				E090B91123B0B2F20012C7E9 /* MessageDAO+Search.swift in Sources */,
 				E05D991B2390C632009F9E8D /* FavoriteAppCell.swift in Sources */,
 				7B894AF3205BF8660065A1B8 /* AddressViewController.swift in Sources */,
-				7C247AA7277AEDD100112A30 /* StackedPhotoLayout.swift in Sources */,
 				7B95533A224380B200CE95E6 /* PinValidationViewController.swift in Sources */,
 				7B09E5581FD1264C002E45D3 /* TextMessageLabel.swift in Sources */,
 				7BAE1B44223B51F3004F2D16 /* ChangeNumberContext.swift in Sources */,
@@ -4722,7 +4692,6 @@
 				7CE5E7A8269BDA29000B7904 /* HomeAppsPinTipsViewController.swift in Sources */,
 				7B4E3078229565C200A03F6E /* SearchBoxLeftView.swift in Sources */,
 				7B710DFC243637A5008F0D73 /* CirclesTableFooterView.swift in Sources */,
-				7C09947627A0D88B00A9D888 /* StackedPhotoMessageViewModel.swift in Sources */,
 				7BF3F67C22AE64FA007B6C77 /* ImageUploadJob.swift in Sources */,
 				7BAD333A216E1DFA006C0309 /* RTCIceCandidate+JSON.swift in Sources */,
 				7BA514862499D96300261289 /* GroupCall.swift in Sources */,
@@ -4771,7 +4740,6 @@
 				7C359DD026A6C173001D3AE4 /* StickerStoreBannerView.swift in Sources */,
 				7B015F51241FA4EC0004A563 /* SearchResultAnnotationView.swift in Sources */,
 				E090B9EB23B0BF940012C7E9 /* MessageDAO+Gallery.swift in Sources */,
-				7C148ED227A3E7FA00599E76 /* StackedPhotoPreviewViewController.swift in Sources */,
 				7BC80A62221D1C07008586AD /* AssetTableHeaderView.swift in Sources */,
 				7B9553402243860C00CE95E6 /* PinValidationPresentationManager.swift in Sources */,
 				94046B93272DC28B007C1D4A /* GroupCallMembersManager.swift in Sources */,
@@ -4823,7 +4791,6 @@
 				7B4ADAA7243C7C8400F04CA6 /* HomeAppsViewController.swift in Sources */,
 				94659DAA25C13793003403E5 /* DevicePerformance.swift in Sources */,
 				DF43304522648B32006D971D /* AssetInfoWindow.swift in Sources */,
-				7C247AA5277AED6800112A30 /* StackedPhotoView.swift in Sources */,
 				7B492F982252159B00C05A45 /* ActivityIndicatorView.swift in Sources */,
 				7BC022E7214A150400B7A398 /* AuthorizationTableViewCell.swift in Sources */,
 				7B7ABBE02539799900070B71 /* ScreenWidth.swift in Sources */,
@@ -4840,7 +4807,6 @@
 				941CAE00276A3F17008F42D6 /* WebPImageDecoderInternal.swift in Sources */,
 				DF5BF55F1FBB281E0092AFB8 /* AssetViewController.swift in Sources */,
 				7B8BB57E234DD18C00991ACB /* SharedMediaTableHeaderView.swift in Sources */,
-				7C0E1D0D2786EAC900762FBE /* SnappingFlowLayout.swift in Sources */,
 				7B81D91623E93F470031E945 /* QuotedMessageViewModel.swift in Sources */,
 				7B280DEE22B120A90084E49E /* PhoneNumberLoginVerificationCodeViewController.swift in Sources */,
 				7BB2831C22D88F07000731E8 /* GalleryTransitionView.swift in Sources */,
