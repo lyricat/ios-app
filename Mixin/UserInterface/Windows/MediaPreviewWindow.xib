@@ -78,7 +78,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular16"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="sendPhotosAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Gw-Xg-pXZ"/>
+                                <action selector="sendPhotosAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="QNx-5c-dow"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-cB-wSQ">
@@ -94,7 +94,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular16"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="sendAsFileAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ar3-h2-eCf"/>
+                                <action selector="sendAsFilesAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="rfV-AY-PMJ"/>
                             </connections>
                         </button>
                     </subviews>
