@@ -82,6 +82,7 @@ class ConversationDataSource {
         self.highlight = highlight
         self.ownerUser = ownerUser
         self.category = conversation.category == ConversationCategory.CONTACT.rawValue ? .contact : .group
+        self.conversation.expireIn = ConversationDAO.shared.getExpireIn(conversationId: conversationId) ?? 0
         factory.delegate = self
     }
     
@@ -509,6 +510,8 @@ extension ConversationDataSource {
             updateMessage(messageId: messageId)
         case .updateConversation, .startedUpdateConversation:
             break
+        case .updateExpireIn(let expireIn):
+            conversation.expireIn = expireIn
         }
     }
     
