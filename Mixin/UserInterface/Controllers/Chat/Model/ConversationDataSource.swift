@@ -82,7 +82,6 @@ class ConversationDataSource {
         self.highlight = highlight
         self.ownerUser = ownerUser
         self.category = conversation.category == ConversationCategory.CONTACT.rawValue ? .contact : .group
-        self.conversation.expireIn = ConversationDAO.shared.getExpireIn(conversationId: conversationId) ?? 0
         factory.delegate = self
     }
     
