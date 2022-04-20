@@ -220,6 +220,9 @@ class AudioMessagePlayingManager: NSObject, AudioSessionClient {
         if player.status == .stopped, let playingMessage = playingMessage {
             cells[playingMessage.messageId]?.cell?.style = .stopped
             DispatchQueue.global().async {
+                if playingMessage.userId != myUserId && playingMessage.expireIn != 0 {
+                    DisappearingMessageDAO.shared.updateExpireAt(for: playingMessage.messageId)
+                }
                 if let next = self.playableMessage(nextTo: playingMessage) {
                     DispatchQueue.main.async {
                         let userInfo = [AudioMessagePlayingManager.conversationIdUserInfoKey: next.conversationId,

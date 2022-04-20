@@ -331,7 +331,7 @@ public final class MessageDAO: UserDatabaseDAO {
                          completion: completion)
     }
     
-    public func updateMediaMessage(messageId: String, mediaUrl: String, status: MediaStatus, conversationId: String, content: String? = nil) {
+    public func updateMediaMessage(messageId: String, mediaUrl: String, status: MediaStatus, conversationId: String, content: String? = nil, updateExpireAt: Bool = false) {
         var assignments = [
             Message.column(of: .mediaUrl).set(to: mediaUrl),
             Message.column(of: .mediaStatus).set(to: status.rawValue)
@@ -341,7 +341,10 @@ public final class MessageDAO: UserDatabaseDAO {
         }
         let condition: SQLSpecificExpressible = Message.column(of: .messageId) == messageId
             && Message.column(of: .category) != MessageCategory.MESSAGE_RECALL.rawValue
-        db.update(Message.self, assignments: assignments, where: condition) { _ in
+        db.update(Message.self, assignments: assignments, where: condition) { db in
+            if updateExpireAt, status == .DONE {
+                try? DisappearingMessageDAO.shared.updateExpireAt(for: messageId, database: db)
+            }
             let change = ConversationChange(conversationId: conversationId,
                                             action: .updateMessage(messageId: messageId))
             NotificationCenter.default.post(onMainThread: conversationDidChangeNotification, object: change)

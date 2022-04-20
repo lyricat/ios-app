@@ -1549,6 +1549,24 @@ extension ConversationViewController: UITableViewDelegate {
                                                                  messageId: message.messageId)
             }
         }
+        if let message = message, message.expireIn != 0 {
+            let updateExpireAt = {
+                DispatchQueue.global().async {
+                    DisappearingMessageDAO.shared.updateExpireAt(for: message.messageId)
+                }
+            }
+            if ["_IMAGE", "_DATA", "_VIDEO"].contains(where: message.category.hasSuffix) {
+                if message.mediaStatus == MediaStatus.DONE.rawValue {
+                    updateExpireAt()
+                }
+            } else if message.category.hasSuffix("_AUDIO") {
+                if message.mediaStatus == MediaStatus.READ.rawValue {
+                    updateExpireAt()
+                }
+            } else {
+                updateExpireAt()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {

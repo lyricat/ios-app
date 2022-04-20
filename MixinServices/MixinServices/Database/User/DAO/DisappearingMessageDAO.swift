@@ -19,7 +19,7 @@ public final class DisappearingMessageDAO: UserDatabaseDAO {
         }
     }
     
-    public func updateExpireAt(for messageId: String, expireAt: Int64?) {
+    public func updateExpireAt(for messageId: String, expireAt: Int64? = nil) {
         db.write { db in
             try updateExpireAt(for: messageId, database: db, expireAt: expireAt)
         }

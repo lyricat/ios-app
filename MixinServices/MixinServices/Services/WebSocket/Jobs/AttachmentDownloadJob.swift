@@ -171,7 +171,8 @@ open class AttachmentDownloadJob: AttachmentLoadingJob {
                                                  mediaUrl: fileName,
                                                  status: status,
                                                  conversationId: message.conversationId,
-                                                 content: content)
+                                                 content: content,
+                                                 updateExpireAt: message.expireIn != 0 && !message.category.hasSuffix("_AUDIO"))
         case .transcriptMessage(let message):
             TranscriptMessageDAO.shared.update(transcriptId: message.transcriptId,
                                                messageId: message.messageId,
