@@ -449,12 +449,12 @@ class UrlWindow {
         }
         guard let recipientId = query["recipient"], let assetId = query["asset"], let amount = query["amount"] else {
             Logger.general.error(category: "PayURL", message: "Invalid URL: \(url)")
-            showAutoHiddenHud(style: .error, text: R.string.localizable.url_invalid_payment())
+            showAutoHiddenHud(style: .error, text: R.string.localizable.invalid_payment_link())
             return true
         }
         guard !recipientId.isEmpty && UUID(uuidString: recipientId) != nil && !assetId.isEmpty && UUID(uuidString: assetId) != nil && !amount.isEmpty && amount.isGenericNumber else {
             Logger.general.error(category: "PayURL", message: "Invalid URL: \(url)")
-            showAutoHiddenHud(style: .error, text: R.string.localizable.url_invalid_payment())
+            showAutoHiddenHud(style: .error, text: R.string.localizable.invalid_payment_link())
             return true
         }
 
@@ -712,7 +712,7 @@ extension UrlWindow {
                     hud.hide()
                 }
             case let .failure(error):
-                let text = error.localizedDescription(overridingNotFoundDescriptionWith: R.string.localizable.code_recognition_fail_title())
+                let text = error.localizedDescription(overridingNotFoundDescriptionWith: R.string.localizable.unrecognized_codes())
                 hud.set(style: .error, text: text)
                 hud.scheduleAutoHidden()
             }
@@ -889,7 +889,7 @@ extension UrlWindow {
             }
 
             let receiverUsers = users.filter { payment.receivers.contains($0.userId) }
-            let error = payment.status == PaymentStatus.paid.rawValue ? R.string.localizable.transfer_paid() : ""
+            let error = payment.status == PaymentStatus.paid.rawValue ? R.string.localizable.pay_paid() : ""
 
             DispatchQueue.main.async {
                 hud.hide()

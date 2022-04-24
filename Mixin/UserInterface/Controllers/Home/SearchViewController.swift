@@ -379,13 +379,13 @@ extension SearchViewController {
             case .searchNumber:
                 return nil
             case .asset:
-                return R.string.localizable.search_section_title_asset()
+                return R.string.localizable.assets()
             case .user:
-                return R.string.localizable.search_section_title_user()
+                return R.string.localizable.contacts()
             case .group:
-                return R.string.localizable.search_section_title_conversation_by_name()
+                return R.string.localizable.conversations()
             case .conversation:
-                return R.string.localizable.search_section_title_conversation_by_message()
+                return R.string.localizable.messages()
             }
         }
         
