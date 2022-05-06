@@ -14,7 +14,6 @@ public final class MessageDAO: UserDatabaseDAO {
     
     public static let shared = MessageDAO()
     
-    public static let willDeleteMessageNotification = Notification.Name("one.mixin.services.MessageDAO.willDeleteMessage")
     public static let didInsertMessageNotification = Notification.Name("one.mixin.services.did.insert.msg")
     public static let didRedecryptMessageNotification = Notification.Name("one.mixin.services.did.redecrypt.msg")
     public static let messageMediaStatusDidUpdateNotification = Notification.Name("one.mixin.services.MessageDAO.MessageMediaStatusDidUpdate")
@@ -715,38 +714,30 @@ public final class MessageDAO: UserDatabaseDAO {
         }
     }
     
-    @discardableResult
-    public func deleteMessage(id: String) -> (deleted: Bool, childMessageIds: [String]) {
-        NotificationCenter.default.post(onMainThread: Self.willDeleteMessageNotification,
-                                        object: self,
-                                        userInfo: [UserInfoKey.messageId: id])
-        var deleteCount = 0
-        var childMessageIds: [String] = []
-        db.write { (db) in
-            let conversationId: String? = try Message
-                .select(Message.column(of: .conversationId))
-                .filter(Message.column(of: .messageId) == id)
-                .fetchOne(db)
-            deleteCount = try Message
+    public func delete(id: String, conversationId: String, completion: @escaping () -> Void) {
+        db.write { db in
+            try Message
                 .filter(Message.column(of: .messageId) == id)
                 .deleteAll(db)
             try MessageMention
                 .filter(MessageMention.column(of: .messageId) == id)
                 .deleteAll(db)
             try deleteFTSContent(db, messageId: id)
-            childMessageIds = try TranscriptMessage
-                .select(TranscriptMessage.column(of: .messageId))
-                .filter(TranscriptMessage.column(of: .transcriptId) == id)
-                .fetchAll(db)
-            try TranscriptMessage
-                .filter(TranscriptMessage.column(of: .transcriptId) == id)
-                .deleteAll(db)
-            if let conversationId = conversationId {
-                try PinMessageDAO.shared.delete(messageIds: [id], conversationId: conversationId, from: db)
-                try clearPinMessageContent(quoteMessageIds: [id], conversationId: conversationId, from: db)
+            try PinMessageDAO.shared.delete(messageIds: [id], conversationId: conversationId, from: db)
+            try clearPinMessageContent(quoteMessageIds: [id], conversationId: conversationId, from: db)
+            db.afterNextTransactionCommit { _ in
+                completion()
             }
         }
-        return (deleteCount > 0, childMessageIds)
+    }
+    
+    public func deleteLegacyMessage(with id: String) {
+        db.write { db in
+            try Message
+                .filter(Message.column(of: .messageId) == id)
+                .deleteAll(db)
+            try deleteFTSContent(db, messageId: id)
+        }
     }
     
     public func hasSentMessage(inConversationOf conversationId: String) -> Bool {
